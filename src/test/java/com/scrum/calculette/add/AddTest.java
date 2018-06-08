@@ -19,10 +19,10 @@ public class AddTest {
 
     @Test
     public void testAdd(){
-        int value1 = 8;
-        int value2 = 4;
+        float value1 = 8;
+        float value2 = 4;
         Add operation = new Add(value1, value2);
-        int result = operation.execute();
+        double result = operation.execute();
 
         Assert.assertEquals("Add not good !", result, 12);
     }

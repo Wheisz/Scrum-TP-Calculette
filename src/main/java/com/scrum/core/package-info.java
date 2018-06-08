@@ -4,7 +4,6 @@
  */
 
 /**
- * Package cours méthodologie Agile/Sctum - Master 2 - 2018
- * TP Calculette.
+ * Package core
  */
-package com.scrum.calculette;
+package com.scrum.core;

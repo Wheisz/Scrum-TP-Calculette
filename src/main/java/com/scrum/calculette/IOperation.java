@@ -1,10 +1,15 @@
 package com.scrum.calculette;
 
+import java.util.List;
+
 public interface IOperation {
 
-	final float value1 = 0;
-	final float value2 = 0;	
-	
-	public float execute(); 
+	/**
+	 * Execute operation
+	 * @return
+	 * @throws Exception if
+	 */
+	float execute() throws Exception;
+	int numberOfValues();
 	
 }
