@@ -5,6 +5,8 @@
 
 package com.scrum.calculette;
 
+import java.util.Scanner;
+
 import org.joda.time.DateTime;
 
 /**
@@ -26,9 +28,41 @@ public final class Application {
      * @param args Argument for CLI.
      */
     public static void main(final String[] args) {
-        final DateTime date = DateTime.now();
-        System.out.println("Application started at : " + date);
 
+    	Scanner scanner = new Scanner(System.in);
+    	
+    	System.out.println("Entrez une valeur");
+    	int number1 = scanner.nextInt();
+    	
+    	System.out.println("Entrez une seconde valeur");
+    	int number2 = scanner.nextInt();
+    	
+    	System.out.println("Veuillez choisir une opération : ");
+    	
+    	System.out.println("1 - Additionner");
+    	System.out.println("2 - Soustraire");
+    	
+    	int userOperation = scanner.nextInt();
+    	
+    	
+    	System.out.println("Le résultat est :" + makeOperation(number1,number2,userOperation));
+    	
+    	
+    }
+    
+    private static float makeOperation(float number1, float number2, int operationId){
 
+    	IOperation operation = null;
+    	float result = 0;
+    	
+    	switch (operationId) {
+    	case 1:
+    		operation = new Addition();
+    		result = operation.execute();
+    	case 2:
+    		operation = new Substract();
+    		result = operation.execute();
+    	}
+    	
     }
 }
