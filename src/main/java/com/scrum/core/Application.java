@@ -12,7 +12,10 @@ import org.joda.time.DateTime;
  * @author Théodore Supiot
  * @version 1.0
  */
-public final class Application {
+public class Application {
+
+    /** State of application. (true if running). */
+    private static boolean isRunning;
 
     /**
      * Constructor.
@@ -26,9 +29,10 @@ public final class Application {
      * @param args Argument for CLI.
      */
     public static void main(final String[] args) {
+        isRunning = true;
+
+        System.out.println("Hello World !!");
         final DateTime date = DateTime.now();
         System.out.println("Application started at : " + date);
-
-
     }
 }
