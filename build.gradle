@@ -28,6 +28,11 @@ def reportDir="${project.buildDir}/reports"
 
 check.dependsOn 'cpd'
 
+/*
+ * Copyright (c) Ida Willy Theo 2018
+ * All rights reserved
+ */
+
 // PMD
 pmd{
     pmdTest.enabled = false
