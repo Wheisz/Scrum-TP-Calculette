@@ -12,7 +12,7 @@ import org.joda.time.DateTime;
  * @author Théodore Supiot
  * @version 1.0
  */
-public class Application {
+public final class Application {
 
     /** State of application. (true if running). */
     private static boolean isRunning;
