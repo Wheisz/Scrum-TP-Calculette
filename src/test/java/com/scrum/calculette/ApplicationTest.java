@@ -6,7 +6,9 @@
 package com.scrum.calculette;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 public class ApplicationTest {
 
@@ -16,6 +18,11 @@ public class ApplicationTest {
         System.out.println("Before test");
     }
 
+    @Test
+    public void mainTest(){
+    	Assert.assertTrue(true);
+    }
+    
     @After
     // S'exécute APRES chaque test
     public void teardown(){
